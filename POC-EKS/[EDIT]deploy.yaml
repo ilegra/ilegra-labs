@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: twitter-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: twitterApp
+  template:
+    metadata:
+      labels:
+        app: twitterApp
+    spec:
+      containers:
+        - name: twitter-application
+          image: URI_DA_IMAGEM_DO_ECR
+          resources:
+                limits:
+                  cpu: 250m
+                  memory: 1Gi
+                requests:
+                  memory: 256Mi
+                  cpu: 200m
+          ports:
+            - containerPort: 80
