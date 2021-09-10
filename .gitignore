@@ -3,5 +3,6 @@ POC-EKS/deploy.yaml
 POC-EKS/sync_to_s3.sh
 POC-EKS/twitter-tokens.txt
 
-POC-GKE/*
-
+POC-GKE/keyfile.json
+POC-GKE/sync_to_gcs.sh
+POC-GKE/twitter-tokens.txt
