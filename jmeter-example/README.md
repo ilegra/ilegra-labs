@@ -10,6 +10,11 @@ For more details about the solution, access the [AWS Solution page](https://aws.
 
 ![Architecture](architecture.png)
 
+
+##### Prerequisites
+
+1. An AWS account
+
 ##### Deployment
 
 AWS provides a Cloudformation template to deploy the solution.
