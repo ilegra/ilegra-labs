@@ -4,6 +4,8 @@
 
 Distributed Load Testing on AWS is a solution that allows you to perform load testing on your applications or systems hosted on Amazon Web Services (AWS) to evaluate the ability of a system, software, or application to manage demand. This is crucial to ensure that applications can scale and manage large numbers of users or concurrent requests.
 
+For more details about the solution, access the [AWS Solution page](https://aws.amazon.com/solutions/distributed-load-testing-on-aws/).
+
 ##### Architecture
 
 ![Architecture](architecture.png)
