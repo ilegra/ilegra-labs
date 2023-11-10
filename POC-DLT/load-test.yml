@@ -1,0 +1,31 @@
+name: Load Test API Gateway
+
+on: [push]
+
+jobs:
+  load_test:
+    runs-on: ubuntu-latest
+    env:
+      RESOURCE_ID: <RESOURCE_ID> # Change to your resource id
+      REST_API_ID: <REST_API_ID> # Change to your rest api id
+      AWS_REGION: us-east-1
+      S3_BUCKET: your-s3-bucket-name # Change to your s3 bucket name
+      JMX_FILE: simple-http.jmx # Change to your jmx file name
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up AWS CLI
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Upload JMX file to S3
+      run: |
+        aws s3 cp ${{ env.JMX_FILE }} s3://${{ env.S3_BUCKET }}/public/test-scenarios/jmeter/${{ env.JMX_FILE }}
+
+    - name: Load Test
+      run: |
+        aws apigateway test-invoke-method --http-method POST --resource-id ${{ env.RESOURCE_ID }} --rest-api-id ${{ env.REST_API_ID }} --path-with-query-string '/scenarios/' --body file://payload.json --region ${{ env.AWS_REGION }}

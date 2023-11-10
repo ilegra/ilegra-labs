@@ -1,0 +1,38 @@
+{
+    "testId": "simple-http",
+    "testName": "sampleScenario",
+    "testDescription": "sampleTestForBlog",
+    "testTaskConfigs": [
+        {
+            "concurrency": "1",
+            "taskCount": "1",
+            "region": "us-east-1"
+        }
+    ],
+    "testScenario": {
+        "execution": [
+            {
+                "ramp-up": "0m",
+                "hold-for": "30s",
+                "scenario": "sampleScenario"
+            }
+        ],
+        "scenarios": {
+            "sampleScenario": {
+                "script": "simple-http.jmx"
+            }
+        }
+    },
+    "showLive": false,
+    "testType": "jmeter",
+    "fileType": "script",
+    "regionalTaskDetails": {
+        "us-east-1": {
+            "vCPULimit": 4000,
+            "vCPUsPerTask": 2,
+            "vCPUsInUse": 0,
+            "dltTaskLimit": 2000,
+            "dltAvailableTasks": 2000
+        }
+    }
+}
