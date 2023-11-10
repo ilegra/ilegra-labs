@@ -66,6 +66,6 @@ Follow down below a diagram that shows the flow of the pipeline including the te
 5. Get the name of the S3 bucket created by the Cloudformation template. The name will start with the prefix distributedloadtesting-dlttestrunnerstoragedltsce-<id>
 6. Based on the copied information from the API, edit the (**load-test.yml**) by changing RESOURCE_ID, REST_API_ID and S3_BUCKET values
 7. Generate and add AWS access and secret keys to your Github repository secrets and name them AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY respectively
-7. Incorporate the (**load-test.yml**) into your Github Actions pipeline
+8. Incorporate the (**load-test.yml**) into your Github Actions pipeline
 
 The (**load-test.yml**) is just an example of how you can integrate the test execution with your Github Actions pipeline. You can use it as a reference to create your own workflow.
