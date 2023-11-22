@@ -1,0 +1,3 @@
+INSERT INTO book (id, author_id, title, publication_year, isbn, is_deleted)  VALUES ('4ca28fd8-9ad4-4a9d-854c-848fe04f8f0b','a97f03f4-9351-4576-8d98-749e80958683', 'Software Architecture The Hard parts', 2001, ' 9782123456803', false);
+INSERT INTO book (id, author_id, title, publication_year, isbn, is_deleted)  VALUES ('b476448d-4735-4885-9230-cd21515b89ff','a97f03f4-9351-4576-8d98-749e80958683', 'Domain Drive in design', 1998, ' 9782123456804', false);
+INSERT INTO book (id, author_id, title, publication_year, isbn, is_deleted)  VALUES ('86454369-49f9-4b38-bcc6-45fdfca2931b','2ee1947a-7b78-43de-b571-bd1e5787f7f5', 'Team topologies', 2019, ' 9782123456805', false);

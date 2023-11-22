@@ -1,0 +1,2 @@
+INSERT INTO author (id, name, birth_date)  VALUES ('a97f03f4-9351-4576-8d98-749e80958683', 'Eric Evans', PARSEDATETIME('26-07-1970','ddMMyyyy'));
+INSERT INTO author (id, name, birth_date)  VALUES ('2ee1947a-7b78-43de-b571-bd1e5787f7f5', 'Matthew Skelton', PARSEDATETIME('26-07-1982','ddMMyyyy'));
